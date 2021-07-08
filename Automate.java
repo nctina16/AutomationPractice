@@ -16,8 +16,8 @@ public class Automate {
 
     public static void main(String args[]) {
         // Setting browser driver
-        System.setProperty("webdriver.chrome.driver","/Users/nivethaclementinad/Downloads/chromedriver");
-        WebDriver driver = new ChromeDriver();
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
